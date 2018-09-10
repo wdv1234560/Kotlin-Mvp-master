@@ -11,9 +11,6 @@ import com.jiac.ktmvp.mvp.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
-    override fun returnHomeData(data: HomeEntity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun loginSuccess() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -32,6 +29,10 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
     }
 
     override fun initData() {
+    }
+
+    override fun returnHomeData(data: HomeEntity?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun showLoading(message: String) {

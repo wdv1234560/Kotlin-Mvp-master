@@ -1,5 +1,6 @@
 package com.jiac.ktmvp.mvp.model.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +31,7 @@ public class HomeEntity extends BaseJson<HomeEntity> {
         public int pageCount;
         public int size;
         public int total;
-        public List<Datas> datas;
+        public ArrayList<Datas> datas;
 
         public static class Datas {
             /**
