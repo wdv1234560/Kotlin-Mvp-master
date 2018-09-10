@@ -1,0 +1,19 @@
+ext {
+
+    version = [
+            androidSupportSdkVersion: "28.0.0-rc02",
+            retrofitVersion         : "2.4.0",
+            okhttpVersion           : "3.11.0",
+            gosnVersion             : "2.8.5"
+    ]
+    dependencies = [
+            //support
+            "recyclerview-v7"    : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            //network
+            "retrofit2"          : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "retrofit-converters": "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
+            "okhttp3"            : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
+            "okhttp3-logging"    : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
+            "gson"               : "com.google.code.gson:gson:${version["gosnVersion"]}"
+    ]
+}
