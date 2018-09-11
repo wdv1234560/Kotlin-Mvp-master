@@ -19,7 +19,7 @@ import io.reactivex.schedulers.Schedulers
  * author   caojiaxu
  */
 class HomePresenter(model: HomeContract.Model, view: HomeContract.View) : BasePresenter<HomeContract.Model, HomeContract.View>(model, view) {
-
+    //Rxjava获取接口数据
     fun getHomeIndex() {
         mModel?.getHomeIndex()
                 ?.subscribeOn(Schedulers.io())
