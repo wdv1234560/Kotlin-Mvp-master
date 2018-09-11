@@ -5,7 +5,7 @@ import com.jiac.ktmvp.base.IRepositoryManager
 import com.jiac.ktmvp.mvp.contract.HomeContract
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import com.jiac.ktmvp.net.service.ApiService
-import retrofit2.Call
+import io.reactivex.Observable
 
 /**
  * 类       名:
@@ -18,7 +18,7 @@ import retrofit2.Call
  * author   caojiaxu
  */
 class HomeModel(iRepositoryManager: IRepositoryManager):BaseModel(iRepositoryManager),HomeContract.Model {
-    override fun getHomeIndex(): Call<HomeEntity> {
+    override fun getHomeIndex(): Observable<HomeEntity> {
         return mIRepositoryManager?.obtainRetrofitService(ApiService::class.java)?.getHomeIndex()!!
     }
 }

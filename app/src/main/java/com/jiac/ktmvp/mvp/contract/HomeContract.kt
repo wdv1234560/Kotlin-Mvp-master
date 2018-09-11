@@ -3,7 +3,7 @@ package com.jiac.ktmvp.mvp.contract
 import com.jiac.ktmvp.base.IModel
 import com.jiac.ktmvp.base.IView
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
-import retrofit2.Call
+import io.reactivex.Observable
 
 /**
  * 类       名:
@@ -20,6 +20,6 @@ interface HomeContract {
         fun returnHomeData(data: ArrayList<HomeEntity.Datas>)
     }
     interface Model:IModel{
-        fun getHomeIndex(): Call<HomeEntity>
+        fun getHomeIndex(): Observable<HomeEntity>
     }
 }

@@ -4,7 +4,8 @@ ext {
             androidSupportSdkVersion: "28.0.0-rc02",
             retrofitVersion         : "2.4.0",
             okhttpVersion           : "3.11.0",
-            gosnVersion             : "2.8.5"
+            gosnVersion             : "2.8.5",
+            rxjavaVersion                  : "2.1.0"
     ]
     dependencies = [
             //support
@@ -12,8 +13,13 @@ ext {
             //network
             "retrofit2"          : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
             "retrofit-converters": "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
+            "retrofit-adapter-rxjava": "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitVersion"]}",
             "okhttp3"            : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
             "okhttp3-logging"    : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
-            "gson"               : "com.google.code.gson:gson:${version["gosnVersion"]}"
+            "gson"               : "com.google.code.gson:gson:${version["gosnVersion"]}",
+            //rx
+            "rxjava2"            : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
+            "rxAndroid2"            : "io.reactivex.rxjava2:rxandroid:${version["rxjavaVersion"]}"
+
     ]
 }

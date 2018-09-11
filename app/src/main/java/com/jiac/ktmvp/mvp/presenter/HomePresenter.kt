@@ -3,8 +3,10 @@ package com.jiac.ktmvp.mvp.presenter
 import com.jiac.ktmvp.base.BasePresenter
 import com.jiac.ktmvp.mvp.contract.HomeContract
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
-import retrofit2.Call
-import retrofit2.Response
+import io.reactivex.Observer
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 
 /**
  * 类       名:
@@ -18,19 +20,29 @@ import retrofit2.Response
  */
 class HomePresenter(model: HomeContract.Model, view: HomeContract.View) : BasePresenter<HomeContract.Model, HomeContract.View>(model, view) {
 
-    fun getHomeIndex(){
-        mRootView?.showLoading("")
-        mModel?.getHomeIndex()?.enqueue(object :retrofit2.Callback<HomeEntity>{
-            override fun onFailure(call: Call<HomeEntity>?, t: Throwable?) {
-                mRootView?.hideLoading()
+    fun getHomeIndex() {
+        mModel?.getHomeIndex()
+                ?.subscribeOn(Schedulers.io())
+                ?.observeOn(AndroidSchedulers.mainThread())
+                ?.doOnSubscribe {
+
+                    mRootView?.showLoading("")
+                }?.doAfterTerminate {
+            mRootView?.hideLoading()
+
+        }?.subscribe(object : Observer<HomeEntity> {
+            override fun onSubscribe(d: Disposable) {
             }
 
-            override fun onResponse(call: Call<HomeEntity>?, response: Response<HomeEntity>?) {
-                mRootView?.returnHomeData(response?.body()?.data?.datas!!)
-                mRootView?.hideLoading()
+            override fun onNext(t: HomeEntity) {
+                mRootView?.returnHomeData(t.data.datas)
             }
 
+            override fun onComplete() {
+            }
 
+            override fun onError(e: Throwable) {
+            }
         })
     }
 }

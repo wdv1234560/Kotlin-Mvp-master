@@ -33,7 +33,7 @@ open class HttpLoggingInterceptor : Interceptor {
 
         if (logRequest) {
             if (request?.body() != null && isParseable(request?.body()?.contentType())) {
-                Log.d("HttpLoggingInterceptor", request?.body().toString())
+                Log.d("HttpLoggingInterceptor", request?.body()?.toString())
             }
         }
 

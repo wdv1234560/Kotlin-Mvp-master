@@ -3,7 +3,7 @@ package com.jiac.ktmvp.mvp.contract
 import com.jiac.ktmvp.base.IModel
 import com.jiac.ktmvp.base.IView
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
-import retrofit2.Call
+import io.reactivex.Observable
 
 interface LoginContract {
     interface View :IView{
@@ -13,6 +13,6 @@ interface LoginContract {
 
     interface Model :IModel{
         fun login():String
-        fun getHomeIndex(): Call<HomeEntity>
+        fun getHomeIndex(): Observable<HomeEntity>
     }
 }

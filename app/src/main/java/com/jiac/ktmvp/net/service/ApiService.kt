@@ -1,7 +1,7 @@
 package com.jiac.ktmvp.net.service
 
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
-import retrofit2.Call
+import io.reactivex.Observable
 import retrofit2.http.GET
 
 /**
@@ -16,5 +16,5 @@ import retrofit2.http.GET
  */
 interface ApiService {
     @GET("article/list/0/json")
-    fun getHomeIndex():Call<HomeEntity>
+    fun getHomeIndex():Observable<HomeEntity>
 }
