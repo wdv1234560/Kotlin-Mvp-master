@@ -5,21 +5,27 @@ ext {
             retrofitVersion         : "2.4.0",
             okhttpVersion           : "3.11.0",
             gosnVersion             : "2.8.5",
-            rxjavaVersion                  : "2.1.0"
+            rxjavaVersion           : "2.1.0",
+            glideVersion            : "4.8.0"
     ]
     dependencies = [
             //support
-            "recyclerview-v7"    : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "recyclerview-v7"        : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
             //network
-            "retrofit2"          : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
-            "retrofit-converters": "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
+            "retrofit2"              : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "retrofit-converters"    : "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
             "retrofit-adapter-rxjava": "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitVersion"]}",
-            "okhttp3"            : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
-            "okhttp3-logging"    : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
-            "gson"               : "com.google.code.gson:gson:${version["gosnVersion"]}",
+            "okhttp3"                : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
+            "okhttp3-logging"        : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
+            "gson"                   : "com.google.code.gson:gson:${version["gosnVersion"]}",
             //rx
-            "rxjava2"            : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
-            "rxAndroid2"            : "io.reactivex.rxjava2:rxandroid:${version["rxjavaVersion"]}"
+            "rxjava2"                : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
+            "rxAndroid2"             : "io.reactivex.rxjava2:rxandroid:${version["rxjavaVersion"]}"
 
+    ]
+
+    glide = [
+            "glide"   : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "glide-compiler": "com.github.bumptech.glide:compiler:${version["glideVersion"]}"
     ]
 }

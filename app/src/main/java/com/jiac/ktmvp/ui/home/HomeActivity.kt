@@ -5,13 +5,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jiac.common.base.BaseActivity
 import com.jiac.ktmvp.R
-import com.jiac.ktmvp.base.BaseActivity
-import com.jiac.ktmvp.base.RepositoryManager
 import com.jiac.ktmvp.mvp.contract.HomeContract
 import com.jiac.ktmvp.mvp.model.HomeModel
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import com.jiac.ktmvp.mvp.presenter.HomePresenter
+import com.jiac.ktmvp.net.RepositoryManager
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.item_home.view.*
 

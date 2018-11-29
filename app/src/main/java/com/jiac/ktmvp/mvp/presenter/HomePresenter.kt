@@ -1,6 +1,6 @@
 package com.jiac.ktmvp.mvp.presenter
 
-import com.jiac.ktmvp.base.BasePresenter
+import com.jiac.common.mvp.BasePresenter
 import com.jiac.ktmvp.mvp.contract.HomeContract
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import io.reactivex.Observer
@@ -19,7 +19,7 @@ import io.reactivex.schedulers.Schedulers
  * author   caojiaxu
  */
 class HomePresenter(model: HomeContract.Model, view: HomeContract.View) : BasePresenter<HomeContract.Model, HomeContract.View>(model, view) {
-
+    //Rxjava获取接口数据
     fun getHomeIndex() {
         mModel?.getHomeIndex()
                 ?.subscribeOn(Schedulers.io())

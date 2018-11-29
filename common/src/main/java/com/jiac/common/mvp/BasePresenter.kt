@@ -1,4 +1,4 @@
-package com.jiac.ktmvp.base
+package com.jiac.common.mvp
 
 open class BasePresenter<M : IModel, V : IView> : IPresenter {
 

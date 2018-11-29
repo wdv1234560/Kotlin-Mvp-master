@@ -1,7 +1,7 @@
 package com.jiac.ktmvp.mvp.model
 
-import com.jiac.ktmvp.base.BaseModel
-import com.jiac.ktmvp.base.IRepositoryManager
+import com.jiac.common.mvp.BaseModel
+import com.jiac.common.net.IRepositoryManager
 import com.jiac.ktmvp.mvp.contract.LoginContract
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import com.jiac.ktmvp.net.service.ApiService
