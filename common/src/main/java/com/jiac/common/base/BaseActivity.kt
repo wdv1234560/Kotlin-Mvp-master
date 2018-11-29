@@ -1,8 +1,9 @@
-package com.jiac.ktmvp.base
+package com.jiac.common.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import com.jiac.common.mvp.IPresenter
+import com.jiac.common.mvp.IView
 
 abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), IView {
     var mPresenter: P? = null
@@ -10,6 +11,7 @@ abstract class BaseActivity<P : IPresenter> : AppCompatActivity(), IView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(initLayoutId())
+
         initView()
         initData()
     }

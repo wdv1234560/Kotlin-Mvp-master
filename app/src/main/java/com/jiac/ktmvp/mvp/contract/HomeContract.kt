@@ -1,7 +1,7 @@
 package com.jiac.ktmvp.mvp.contract
 
-import com.jiac.ktmvp.base.IModel
-import com.jiac.ktmvp.base.IView
+import com.jiac.common.mvp.IModel
+import com.jiac.common.mvp.IView
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import io.reactivex.Observable
 
@@ -16,10 +16,11 @@ import io.reactivex.Observable
  * author   caojiaxu
  */
 interface HomeContract {
-    interface View:IView{
+    interface View: IView {
         fun returnHomeData(data: ArrayList<HomeEntity.Datas>)
     }
-    interface Model:IModel{
+    interface Model: IModel {
         fun getHomeIndex(): Observable<HomeEntity>
+
     }
 }

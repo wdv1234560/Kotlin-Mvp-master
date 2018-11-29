@@ -1,6 +1,6 @@
 package com.jiac.ktmvp.mvp.presenter
 
-import com.jiac.ktmvp.base.BasePresenter
+import com.jiac.common.mvp.BasePresenter
 import com.jiac.ktmvp.mvp.contract.HomeContract
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity
 import io.reactivex.Observer

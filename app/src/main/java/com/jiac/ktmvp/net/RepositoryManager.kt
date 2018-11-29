@@ -1,5 +1,7 @@
-package com.jiac.ktmvp.base
+package com.jiac.ktmvp.net
 
+import com.jiac.common.net.IRepositoryManager
+import com.jiac.ktmvp.base.Api
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -8,7 +10,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-open class RepositoryManager:IRepositoryManager {
+open class RepositoryManager: IRepositoryManager {
     @Synchronized
     override fun <T> obtainRetrofitService(service: Class<T>): T {
         return getRetrofit().create(service)

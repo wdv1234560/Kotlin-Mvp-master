@@ -1,4 +1,6 @@
-package com.jiac.ktmvp.base
+package com.jiac.common.mvp
+
+import com.jiac.common.net.IRepositoryManager
 
 open class BaseModel : IModel {
 
