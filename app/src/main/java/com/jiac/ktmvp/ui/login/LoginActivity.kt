@@ -2,8 +2,8 @@ package com.jiac.ktmvp.ui.login
 
 import android.widget.Toast
 import com.jiac.common.base.BaseActivity
+import com.jiac.common.net.RepositoryManager
 import com.jiac.ktmvp.R
-import com.jiac.ktmvp.net.RepositoryManager
 import com.jiac.ktmvp.mvp.contract.LoginContract
 import com.jiac.ktmvp.mvp.model.LoginModel
 import com.jiac.ktmvp.mvp.model.entity.HomeEntity

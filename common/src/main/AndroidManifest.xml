@@ -1,2 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.jiac.common"/>
+          package="com.jiac.common">
+    <!--allowBackup 标志(默认为 true )来设置应用数据是否能能够被备份或恢复。
+    当这个标志被设置为true时应用程序数据可以在手机未获取 ROOT 的情况下通过adb调试工具来备份和恢复，
+    这就允许恶意攻击者在接触用户手机的情况下在短时间内启动手机 USB 调试功能来窃取那些能够受到 AllowBackup 漏洞影响的应用的数据，
+    造成用户隐私泄露甚至财产损失。-->
+    <!--supportsRtl 支持原生RTL(由右到左显示)-->
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"/>
+</manifest>
